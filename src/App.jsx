@@ -1,5 +1,6 @@
 import React from 'react';
 import './app.scss';
+import { getPlaces } from './lib/api';
 
 
 
@@ -15,20 +16,19 @@ class App extends React.Component {
     super(props);
     this.rouletteRef = React.createRef();
   }
+  componentDidMount() {
+    getPlaces().then((list) => {
+
+    }).catch((err) => {
+
+    });
+  }
   spinRandom = () => {
     const { sliceCount, active } = this.state;
-    // const randomIndex = parseInt(Math.random() * sliceCount);
-    // const classString = this.rouletteRef.current.className;
     this.setState({
       index: parseInt(Math.random() * sliceCount),
       active: active ? false : true,
     })
-    // setTimeout(()=>{
-    //   this.setState({
-    //     // index: null,
-    //     active: false,
-    //   })
-    // },600)
   }
 
   render() {
@@ -40,21 +40,43 @@ class App extends React.Component {
 
           <div className="roulette" ref={this.rouletteRef}>
             <p className="love">CLick the SPINNER!</p>
-            <div className={"spinner " + (index != null ? " index-" + index : "") + (active?" spin":"")}>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-              
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
-                <img src="https://picsum.photos/650/450" className="triangle "/>
+            <div className={"spinner " + (index != null ? " index-" + index : "") + (active ? " spin" : "")}>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
+              <div className="triangle ">
+                <img src="https://picsum.photos/650/450" />
+              </div>
             </div>
             <div id="like" className="button button-spin" onClick={this.spinRandom}><span>SPIN</span></div>
           </div>

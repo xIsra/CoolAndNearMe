@@ -1,4 +1,4 @@
-import { getDistance } from "lib/location.js"
+import { getDistance } from "./location"
 
 const GOOGLE_API_KEY = "AIzaSyDgHLkqOFD4nkK1oX5_Kl3Xx7E0e0jrQJg";
 
@@ -8,7 +8,7 @@ const googlePhotoLink = (phref) => `https://maps.googleapis.com/maps/api/place/p
 export async function getPlaces(lat, lng) {
     // const response = await fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=500&opennow&types=food&key=${GOOGLE_API_KEY}`);
     const response = _PLACES_RESULT;
-    if (status !== "OK")
+    if (response.status !== "OK")
         throw new Error("Unable to get places;");
     return response.results.map((v) => {
 
