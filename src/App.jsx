@@ -41,54 +41,20 @@ class App extends React.Component {
           <div className="roulette" ref={this.rouletteRef}>
             <p className="love">CLick the SPINNER!</p>
             <div className={"spinner " + (index != null ? " index-" + index : "") + (active?" spin":"")}>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">1</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">2</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">3</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">4</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">5</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">6</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">7</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">8</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">9</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">10</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">11</span> */}
-              </div>
-              <div className="triangle">
-                <img src="https://picsum.photos/650/450" alt="" srcset=""/>
-                {/* <span className="text">12</span> */}
-              </div>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+              
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
+                <img src="https://picsum.photos/650/450" className="triangle "/>
             </div>
             <div id="like" className="button button-spin" onClick={this.spinRandom}><span>SPIN</span></div>
           </div>
